@@ -26,3 +26,4 @@ jobs:
         vault_password: ${{secrets.VAULT_PASSWORD}}
         options: |
           --verbose
+          --private-key ${{secrets.SSH_PRIVATE_KEY}}
