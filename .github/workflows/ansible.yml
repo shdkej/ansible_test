@@ -17,15 +17,12 @@ jobs:
     - name: Run playbook
       uses: dawidd6/action-ansible-playbook@v2
       with:
-        playbook: deploy.yml
+        playbook: vpn.yml
         directory: ./
         key: ${{secrets.SSH_PRIVATE_KEY}}
         inventory: |
           [all]
-          example.com
-
-          [group1]
-          example.com
+          193.122.124.65
         vault_password: ${{secrets.VAULT_PASSWORD}}
         options: |
           --limit group1
