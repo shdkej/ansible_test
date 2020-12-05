@@ -25,6 +25,4 @@ jobs:
           193.122.124.65
         vault_password: ${{secrets.VAULT_PASSWORD}}
         options: |
-          --limit group1
-          --extra-vars hello=there
           --verbose
